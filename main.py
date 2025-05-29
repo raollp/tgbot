@@ -79,4 +79,6 @@ def handle_text(message):
         elif user['in_game']==True:
             bot.send_message(message.chat.id, 'Пока мы играем в игру я могу реагировать только на: ''\n- числа от 1 до 100 \n- команды /cancel и /stat')
 
-
+if __name__ == '__main__':
+    print("Бот запущен")
+    bot.polling(none_stop=True)

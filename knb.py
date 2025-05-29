@@ -1,8 +1,11 @@
 import telebot
 import random
 
-TOKEN= '7903985712:AAEkwIWk86q4uYPXkT44ZuwXwBVywe4dUzM'
+f = open('token.ini', 'r', encoding='UTF-8')
+TOKEN = f.read()
 bot = telebot.TeleBot(TOKEN)
+f.close()
+
 i = 0
 w = 0
 @bot.message_handler(commands=['start'])
